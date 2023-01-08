@@ -3,12 +3,21 @@ import { NavLink, useParams } from 'react-router-dom';
 import { Button } from '@mui/material';
 import TextField from '@mui/material/TextField';
 import { useContext, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import './SignUp.css';
+import { signUpUser } from '../../services/auth';
 
 export default function SignUp() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const history = useHistory();
+
+  const handleSignUp = async () => {
+    const userResp = await signUpUser(email, password);
+    console.log(userResp);
+    history.push('/landing');
+  };
 
   return (
     <div className="auth-body">
@@ -20,6 +29,7 @@ export default function SignUp() {
                 // id="outlined-basic"
                 label="Email"
                 variant="outlined"
+                id="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
@@ -27,9 +37,10 @@ export default function SignUp() {
 
             <div className="password-container">
               <TextField
-                // id="outlined-basic"
+                name="Password"
                 label="Password"
                 variant="outlined"
+                id="password"
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -37,7 +48,7 @@ export default function SignUp() {
             </div>
           </div>
 
-          <Button variant="outlined" className="auth-button" size="small">
+          <Button variant="outlined" className="auth-button" size="small" onClick={handleSignUp}>
             Sign up
           </Button>
         </div>
