@@ -3,7 +3,8 @@ import React from 'react';
 import { Button } from '@mui/material';
 import TextField from '@mui/material/TextField';
 import { useContext, useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
+import Logo from './assets/turn.png';
 
 import './SignUp.css';
 import { signUpUser } from '../../services/auth';
@@ -25,6 +26,14 @@ export default function SignUp() {
   return (
     <div className="auth-body">
       <div className="auth-main">
+        <div className="login-header">
+          <img className="login-logo" src={Logo}></img>
+          <h1>The Den</h1>
+        </div>
+        <div className="login-message">
+          <p className="create-account">Create your free account</p>
+          <p className="unlock">Unlock new skills and sounds.</p>
+        </div>
         <div className="input-container">
           <div className="input-form">
             <div className="email-container">
@@ -49,11 +58,19 @@ export default function SignUp() {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
+            <Button
+              variant="contained"
+              className="auth-button"
+              size="small"
+              style={{ height: '6vh', width: '10vw' }}
+              onClick={handleSignUp}
+            >
+              Create Account
+            </Button>
+            <p>
+              Already have an account? <NavLink to="/sign-in">Sign in</NavLink>
+            </p>
           </div>
-
-          <Button variant="outlined" className="auth-button" size="small" onClick={handleSignUp}>
-            Sign up
-          </Button>
         </div>
       </div>
     </div>

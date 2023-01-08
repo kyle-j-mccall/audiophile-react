@@ -6,6 +6,7 @@ import { useContext, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import './Login.css';
 import { login } from '../../services/auth';
+import Logo from './assets/turn.png';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -21,6 +22,14 @@ export default function Login() {
   return (
     <div className="auth-body">
       <div className="auth-main">
+        <div className="login-header">
+          <img className="login-logo" src={Logo}></img>
+          <h1>The Den</h1>
+        </div>
+        <div className="login-message">
+          <p>Login to your account.</p>
+        </div>
+
         <div className="input-container">
           <div className="input-form">
             <div className="email-container">
@@ -43,11 +52,19 @@ export default function Login() {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
+            <Button
+              variant="contained"
+              className="login-button"
+              size="small"
+              style={{ height: '6vh', width: '10vw' }}
+              onClick={login}
+            >
+              Log in
+            </Button>
+            <p>
+              Don&apos;t have an account? <NavLink to="/sign-up">Sign Up</NavLink>
+            </p>
           </div>
-
-          <Button variant="outlined" className="auth-button" size="small" onClick={login}>
-            Sign in
-          </Button>
         </div>
       </div>
     </div>

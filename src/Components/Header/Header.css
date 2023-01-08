@@ -1,6 +1,6 @@
 .nav-bar {
   position: fixed;
-  width: 95vw;
+  width: 100vw;
   height: 7vh;
   display: flex;
   justify-content: space-between;
@@ -23,24 +23,34 @@
 .sign-in-up {
   display: flex;
   flex-direction: row;
+  margin-right: 4vw;
 }
 
-.browse-sell {
+.user-logo {
+  height: 5vh;
+}
+
+.nav-links {
   display: flex;
   color: rgb(178, 178, 178);
   margin-top: 1vh;
   font-family: 'Varela Round', sans-serif;
   font-size: 2vh;
+  text-decoration: none;
 }
 
 .browse,
-.sell {
+.sell,
+.lessons {
   cursor: pointer;
 }
 .browse:hover {
   color: rgb(239, 237, 237);
 }
 .sell:hover {
+  color: rgb(239, 237, 237);
+}
+.lessons:hover {
   color: rgb(239, 237, 237);
 }
 
@@ -68,4 +78,10 @@
 
 a {
   text-decoration: none;
+}
+
+.profile-nav {
+  margin-right: 4vw;
+  margin-top: 1vh;
+  cursor: pointer;
 }
