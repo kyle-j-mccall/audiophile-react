@@ -14,7 +14,10 @@ export default function Header() {
         </div>
         <div className="browse-sell">
           {/* <NavLink> */}
-          <p className="browse">Browse</p>
+          <NavLink to="/browse">
+            <p className="browse">Browse</p>
+          </NavLink>
+
           {/* </NavLink> */}
           {/* <NavLink> */}
           <p className="sell">Sell</p>

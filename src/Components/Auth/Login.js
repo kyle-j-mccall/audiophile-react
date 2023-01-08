@@ -3,12 +3,20 @@ import { NavLink, useParams } from 'react-router-dom';
 import { Button } from '@mui/material';
 import TextField from '@mui/material/TextField';
 import { useContext, useState } from 'react';
-
+import { useHistory } from 'react-router-dom';
 import './Login.css';
+import { login } from '../../services/auth';
 
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const history = useHistory();
+
+  const handleLogin = async () => {
+    const userResp = await login(email, password);
+    console.log(userResp);
+    history.push('/landing');
+  };
 
   return (
     <div className="auth-body">
@@ -37,7 +45,7 @@ export default function Login() {
             </div>
           </div>
 
-          <Button variant="outlined" className="auth-button" size="small">
+          <Button variant="outlined" className="auth-button" size="small" onClick={login}>
             Sign in
           </Button>
         </div>

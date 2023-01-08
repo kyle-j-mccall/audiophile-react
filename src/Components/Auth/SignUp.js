@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, useParams } from 'react-router-dom';
+// import { NavLink, useParams } from 'react-router-dom';
 import { Button } from '@mui/material';
 import TextField from '@mui/material/TextField';
 import { useContext, useState } from 'react';
@@ -7,14 +7,17 @@ import { useHistory } from 'react-router-dom';
 
 import './SignUp.css';
 import { signUpUser } from '../../services/auth';
+import { UserContext } from '../../context/userContext';
 
 export default function SignUp() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const history = useHistory();
+  const { setUser } = useContext(UserContext);
 
   const handleSignUp = async () => {
     const userResp = await signUpUser(email, password);
+    setUser(userResp);
     console.log(userResp);
     history.push('/landing');
   };
