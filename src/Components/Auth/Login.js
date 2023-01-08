@@ -4,10 +4,9 @@ import { Button } from '@mui/material';
 import TextField from '@mui/material/TextField';
 import { useContext, useState } from 'react';
 
-import './Auth.css';
+import './Login.css';
 
-export default function Auth() {
-  const { type } = useParams();
+export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -15,19 +14,6 @@ export default function Auth() {
     <div className="auth-body">
       <div className="auth-main">
         <div className="input-container">
-          <div className="auth-nav">
-            <NavLink to="/auth/sign-in" className="auth-link">
-              <Button variant="outlined" className="auth-button">
-                Sign in
-              </Button>
-            </NavLink>
-            <NavLink to="/auth/sign-up" className="auth-link">
-              <Button variant="outlined" className="auth-button">
-                Sign up
-              </Button>
-            </NavLink>
-          </div>
-
           <div className="input-form">
             <div className="email-container">
               <TextField
@@ -51,18 +37,9 @@ export default function Auth() {
             </div>
           </div>
 
-          <div className="submit-button">
-            {type === 'sign-up' && (
-              <Button variant="contained" className="auth-button" type="button">
-                Sign up
-              </Button>
-            )}
-            {type === 'sign-in' && (
-              <Button variant="contained" className="auth-button" type="button">
-                Sign in
-              </Button>
-            )}
-          </div>
+          <Button variant="outlined" className="auth-button" size="small">
+            Sign in
+          </Button>
         </div>
       </div>
     </div>

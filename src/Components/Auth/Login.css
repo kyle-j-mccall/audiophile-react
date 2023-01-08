@@ -29,16 +29,6 @@
   align-items: center;
 }
 
-.auth-link {
-  text-decoration: none;
-}
-
-.auth-nav {
-  display: flex;
-  padding: 2vh;
-  justify-content: space-evenly;
-}
-
 .input-form {
   display: flex;
   flex-direction: column;
@@ -49,6 +39,7 @@
 }
 
 .submit-button {
+  height: 2vh;
   display: flex;
   justify-content: center;
   align-items: center;
