@@ -1,0 +1,38 @@
+.nav-bar {
+  height: 7vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  color: ivory;
+  background-color: rgb(24, 24, 24);
+  font-family: 'Prompt', sans-serif;
+  box-shadow: -1px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -1px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.sign-in-up {
+  display: flex;
+  flex-direction: row;
+}
+
+.browse-sell {
+  font-size: 2vh;
+  display: flex;
+}
+
+.the-den {
+  font-size: 3vh;
+  font-weight: bold;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-left p {
+  margin-left: 2vw;
+}

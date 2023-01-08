@@ -1,0 +1,22 @@
+.hero-body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.hero-main {
+  width: 100vw;
+  height: 93vh;
+  background-image: url(./assets/the-den-laptop.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-text {
+  margin-top: 0;
+  font-family: 'Prompt', sans-serif;
+}
+.hero-text-container {
+}
