@@ -2,17 +2,23 @@ import React from 'react';
 import { Button } from '@mui/material';
 import './Header.css';
 import { NavLink } from 'react-router-dom';
+import Logo from './assets/binary-code.png';
 
 export default function Header() {
   return (
     <header className="nav-bar">
       <div className="nav-left">
         <div className="the-den">
+          <img src={Logo} className="logo"></img>
           <h3>The Den</h3>
         </div>
         <div className="browse-sell">
-          <p>Browse</p>
-          <p>Sell</p>
+          {/* <NavLink> */}
+          <p className="browse">Browse</p>
+          {/* </NavLink> */}
+          {/* <NavLink> */}
+          <p className="sell">Sell</p>
+          {/* </NavLink> */}
         </div>
       </div>
 

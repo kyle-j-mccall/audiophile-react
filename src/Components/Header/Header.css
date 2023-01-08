@@ -1,4 +1,6 @@
 .nav-bar {
+  position: fixed;
+  width: 95vw;
   height: 7vh;
   display: flex;
   justify-content: space-between;
@@ -13,19 +15,46 @@
   -moz-box-shadow: -1px 5px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
+.logo {
+  height: 5vh;
+  margin-right: 1vw;
+}
+
 .sign-in-up {
   display: flex;
   flex-direction: row;
 }
 
 .browse-sell {
-  font-size: 2vh;
   display: flex;
+  color: rgb(178, 178, 178);
+  margin-top: 1vh;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 2vh;
+}
+
+.browse,
+.sell {
+  cursor: pointer;
+}
+.browse:hover {
+  color: rgb(239, 237, 237);
+}
+.sell:hover {
+  color: rgb(239, 237, 237);
 }
 
 .the-den {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 3vh;
   font-weight: bold;
+  font-family: 'Chakra Petch', sans-serif;
+  background: #cfcfcf;
+  background: linear-gradient(to right, #cfcfcf 19%, #3aa1f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .nav-left {
@@ -35,4 +64,8 @@
 
 .nav-left p {
   margin-left: 2vw;
+}
+
+a {
+  text-decoration: none;
 }
