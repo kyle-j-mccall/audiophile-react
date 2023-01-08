@@ -17,10 +17,14 @@ export default function Header() {
       </div>
 
       <div className="sign-in-up">
-        <Button size="small">Login</Button>
-        <Button variant="contained" size="small">
-          Sign up
-        </Button>
+        <NavLink to="/log-in">
+          <Button size="small">Login</Button>
+        </NavLink>
+        <NavLink to="sign-up">
+          <Button variant="contained" size="small">
+            Sign up
+          </Button>
+        </NavLink>
       </div>
     </header>
   );
